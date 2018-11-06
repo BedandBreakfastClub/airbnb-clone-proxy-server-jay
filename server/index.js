@@ -12,6 +12,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.get('/api/rooms/:listingId/booking', (req, res) => {
+  fetch('localhost:3004/api/rooms/:listingId/booking')
   res.end();
 });
 
