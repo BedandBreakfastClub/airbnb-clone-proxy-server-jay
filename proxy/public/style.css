@@ -1,10 +1,11 @@
 #booking-module {
-  margin-left: 65%;
+ display: table-cell;
 }
 .reviews-booking {
-  display: flex;
-  flex-direction: column;
+  display: table;
 }
 #reviews-module {
-  margin-right: 45%;
+  display: table-cell;
+  padding: 15px;
+  min-width: 870px;
 }
