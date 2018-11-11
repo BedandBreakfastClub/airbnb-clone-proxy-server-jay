@@ -14,7 +14,12 @@ app.get('/rooms/:listingId/', (req, res) => {
   const options = {
     root: path.join(__dirname, '..', 'public/'),
   };
-  res.sendFile('index.html', options);
+  res.sendFile('index.html', options, (err) => {
+  	if (err) {
+  	  console.error(err);
+  	  res.sendStatus(500);
+  	}
+  });
 });
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
