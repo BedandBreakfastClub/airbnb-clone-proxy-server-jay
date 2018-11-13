@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>TeamBnB</title>
+    <link rel=“icon” type=“image/png” href=“https://www.airbnb.com/favicon.ico“>
+    <style>
+      .flex-container {
+        display: flex;
+        align-items: stretch;
+      }
+      .center-page {
+        max-width: 1080px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        width: auto !important;
+        padding-right: 24px !important;
+        padding-left: 24px !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="photo-module"></div>
+    <div class="flex-container center-page">
+        <div style="flex-grow: 4" id="reviews-module"></div>
+        <div style="flex-grow: 1" id="booking-module"></div>
+    </div>
+    <div id="similar-listings-module"></div>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="http://reviews-env-1.zha7ejydzv.us-west-1.elasticbeanstalk.com/bundle.js"></script>
+    <script src="http://13.57.190.62/bundle.js"></script>
+    <script src="http://34.220.178.216/bundle.js"></script>
+    <script src="http://54.193.61.151:3003/dist/bundle.js"></script>
+    <!-- see: https://reactjs.org/docs/react-without-jsx.html -->
+    <script>
+      ReactDOM.render(React.createElement(PhotoModule), document.getElementById('photo-module'));
+      ReactDOM.render(React.createElement(Booking), document.getElementById('booking-module'));
+      ReactDOM.render(React.createElement(SimilarListings), document.getElementById('similar-listings-module'));
+      ReactDOM.render(React.createElement(reviewModule), document.getElementById('reviews-module'));
+    </script>
+  </body>
+</html>
